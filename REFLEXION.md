@@ -1,23 +1,71 @@
-# Reflexión - TP2
+# Reflexión - TP3
 
-## 1. Imagen y atributo alt
+## 1. Código del campo Código Postal
 
-La imagen que guardé dentro de la carpeta `img/` se llama `mi_foto.jpg`.
+Para validar el código postal utilicé un campo de texto con el atributo `pattern` y un atributo `title` para indicar al usuario el formato requerido.
 
-En el archivo `acercade.html` utilicé el siguiente texto alternativo:
+El código HTML utilizado fue:
 
-`Fotografía de Sandra Vela, estudiante interesada en el desarrollo web`
+```html
+<input
+    type="text"
+    id="codigo-postal"
+    name="codigo-postal"
+    pattern="^[A-Z]\d{4}[A-Z]{3}$"
+    title="Ingrese el código postal con el formato R8500AAF"
+>
+```
 
-El atributo `alt` es importante porque proporciona una descripción de la imagen para personas que utilizan lectores de pantalla y también muestra información alternativa cuando la imagen no puede cargarse correctamente.
+El patrón utilizado permite validar un código postal compuesto por una letra mayúscula, cuatro números y tres letras mayúsculas. Por ejemplo: `R8500AAF`.
 
-## 2. Importancia de las etiquetas semánticas
+## 2. Utilidad de la etiqueta label
 
-Considero que utilizar etiquetas semánticas como `<main>`, `<nav>`, `<header>` o `<footer>` es fundamental porque permiten identificar claramente la función que cumple cada sección dentro de una página web. A diferencia de utilizar únicamente etiquetas genéricas como `<div>`, las etiquetas semánticas aportan significado a la estructura del documento.
+La etiqueta `<label>` sirve para indicar qué campo del formulario corresponde a un determinado texto descriptivo. Esto mejora la accesibilidad y facilita que el usuario pueda identificar qué información debe ingresar.
 
-Además, ayudan a mejorar la accesibilidad para las personas que utilizan tecnologías asistivas y facilitan la interpretación del contenido por parte de los motores de búsqueda. También hacen que el código sea más ordenado, legible y fácil de mantener.
+Para asociar correctamente un `<label>` con un campo de entrada se utiliza el atributo `for` en el `<label>`, cuyo valor debe coincidir exactamente con el atributo `id` del campo.
 
-## 3. Verificación de las rutas de navegación
+Por ejemplo:
 
-Verifiqué las rutas de los enlaces utilizando rutas relativas entre los archivos `index.html` y `acercade.html`. Primero probé el funcionamiento de los enlaces en mi entorno local abriendo la página en el navegador y navegando entre ambas páginas.
+```html
+<label for="nombre">Nombre:</label>
 
-Luego, tras publicar el proyecto en GitHub Pages, comprobé nuevamente que los enlaces funcionaran correctamente. Como ambos archivos se encuentran en la raíz del repositorio, las rutas relativas `index.html` y `acercade.html` permiten navegar correctamente tanto en el entorno local como en el sitio publicado.
+<input
+    type="text"
+    id="nombre"
+    name="nombre"
+>
+```
+
+En este caso, el valor `nombre` de `for` coincide con el valor `nombre` de `id`, por lo que ambos elementos quedan asociados.
+
+## 3. Comportamiento de los botones radio
+
+Los botones de tipo `radio` permiten seleccionar una sola opción dentro de un grupo cuando comparten el mismo atributo `name`.
+
+En mi formulario utilicé:
+
+```html
+<input
+    type="radio"
+    name="metodo-contacto"
+    value="Correo electrónico"
+>
+
+<input
+    type="radio"
+    name="metodo-contacto"
+    value="Correo postal"
+>
+
+<input
+    type="radio"
+    name="metodo-contacto"
+    value="Teléfono"
+>
+```
+
+Como los tres botones tienen el mismo `name`, son opciones excluyentes y solamente se puede seleccionar una.
+
+Si cada botón tuviera un `name` diferente, el navegador los consideraría grupos distintos y sería posible seleccionar más de una opción.
+
+En este trabajo seleccioné por defecto la opción "Correo electrónico" utilizando el atributo `checked`.
