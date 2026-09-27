@@ -1,56 +1,66 @@
-# Proyecto: vela-9972-35
+# Portal personal de Sandra Vela
 
-Configuración de Entorno y Control de Versiones (Git & GitHub)
+Sitio web personal desarrollado como parte de la formación en la **Tecnicatura en Desarrollo Web** del CURZAS - UNCo, Viedma, Río Negro.
 
-## Descripción
+El proyecto presenta información sobre la trayectoria, los intereses profesionales y las tecnologías que Sandra Vela desea continuar aprendiendo.
 
-Primer Trabajo Practico de la materia Programacion Estatica y Laboratorio Web con el objetivo:
-- Instalar y configurar el entorno de trabajo local (VS Code / VSCodium, Git).
-- Crear y configurar una cuenta de usuario en la plataforma GitHub.
-- Utilizar comandos esenciales de Git para inicializar un repositorio local y vincularlo a un repositorio remoto.
-- Habilitar el despliegue automático mediante GitHub Pages.
+[![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=FFFFFF)](https://developer.mozilla.org/es/docs/Web/HTML)
+[![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=FFFFFF)](https://developer.mozilla.org/es/docs/Web/CSS)
 
-## Autoría
+## Contenido
 
-- **Autora:** Sandra Ines Vela
-- **Contacto:** sandravelacuenca@gmail.com
+- **Inicio:** presentación del espacio personal y sus objetivos de formación.
+- **Acerca de:** información sobre el perfil, intereses tecnológicos e imagen personal.
+- **Diseño:** estilos básicos para la estructura visual del sitio.
 
-## Estado
+## Tecnologías
 
-En desarrollo / Trabajo académico.
+- HTML5
+- CSS3
+- Diseño adaptable mediante la etiqueta `viewport`
+- Recursos locales en la carpeta `img/`
 
-## Requisitos
+## Estructura del proyecto
 
-- Editor recomendado: Visual Studio Code o VSCodium
-- Control de versiones: Git
-- Navegador web moderno para visualizar `index.html`
-
-## Instalación rápida
-
-1. Clonar el repositorio:
-
-```
-git clone <url-del-repositorio>
-```
-
-2. Abrir en VS Code:
-
-```
-code .
+```text
+.
+├── index.html        # Página principal
+├── acercade.html     # Información personal y profesional
+├── styless.css       # Hoja de estilos disponible en el proyecto
+├── img/
+│   └── mi_foto.jpg   # Imagen de perfil
+├── REFLEXION.md      # Reflexión sobre el proceso de aprendizaje
+└── README.md         # Documentación del proyecto
 ```
 
-3. Abrir `index.html` en el navegador para ver la página principal.
+## Ejecución
 
-## Despliegue (GitHub Pages)
+El proyecto no requiere instalación de dependencias ni un servidor backend.
 
-Pasos generales:
+1. Clonar o descargar este repositorio.
+2. Abrir `index.html` directamente en un navegador.
+3. Navegar entre las secciones **Inicio** y **Acerca de**.
 
-- Crear un repositorio en GitHub y subir el código.
-- En la configuración del repositorio, habilitar GitHub Pages desde la rama `main` o `gh-pages`.
+También puede ejecutarse con cualquier servidor local para desarrollo. Por ejemplo, desde la carpeta raíz:
 
-## Estructura del repositorio
+```bash
+python -m http.server 8000
+```
 
-- `index.html` — Página principal
-- `REFLEXION.md` — Reflexiones sobre el proyecto
-- `capturas/` — Carpeta con capturas o imágenes
-- `README.md` — Esta carátula
+Luego, abrir [http://localhost:8000](http://localhost:8000) en el navegador.
+
+
+## Objetivos de aprendizaje
+
+- Practicar la creación de páginas semánticas con HTML5.
+- Organizar la navegación entre documentos HTML.
+- Incorporar recursos multimedia locales con textos alternativos.
+- Aplicar estilos básicos mediante CSS.
+- Documentar la estructura y el uso de un proyecto web.
+
+## Autora
+
+**Sandra Vela**  
+Tecnicatura en Desarrollo Web  
+CURZAS - Universidad Nacional del Comahue  
+Viedma, Río Negro, Argentina
