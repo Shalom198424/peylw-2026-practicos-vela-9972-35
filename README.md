@@ -1,62 +1,80 @@
 # Portal personal de Sandra Vela
 
-Sitio web personal desarrollado como parte de la formación en la **Tecnicatura en Desarrollo Web** del CURZAS - UNCo, Viedma, Río Negro.
+Sitio web estático desarrollado como trabajo práctico de la Tecnicatura en Desarrollo Web del CURZAS - UNCo, Viedma, Río Negro.
 
-El proyecto presenta información sobre la trayectoria, los intereses profesionales y las tecnologías que Sandra Vela desea continuar aprendiendo.
+El proyecto presenta una identidad personal y profesional de Sandra Vela, con información sobre su formación, intereses tecnológicos y un formulario de contacto estructurado en HTML.
 
 [![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=FFFFFF)](https://developer.mozilla.org/es/docs/Web/HTML)
 [![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=FFFFFF)](https://developer.mozilla.org/es/docs/Web/CSS)
 
-## Contenido
+## Descripción del proyecto
 
-- **Inicio:** presentación del espacio personal y sus objetivos de formación.
-- **Acerca de:** información sobre el perfil, intereses tecnológicos e imagen personal.
-- **Diseño:** estilos básicos para la estructura visual del sitio.
+Este portal está pensado como una página personal con navegación entre distintas secciones:
 
-## Tecnologías
+- Inicio: bienvenida y presentación general del espacio personal.
+- Acerca de: perfil profesional, intereses tecnológicos y fotografía personal.
+- Contacto: formulario con distintos tipos de campos, validaciones básicas en HTML y resumen de datos.
+
+La estructura del sitio se basa en HTML semántico y una hoja de estilos compartida para mantener una apariencia coherente.
+
+## Tecnologías utilizadas
 
 - HTML5
 - CSS3
-- Diseño adaptable mediante la etiqueta `viewport`
-- Recursos locales en la carpeta `img/`
+- Etiqueta `meta viewport` para responsive mobile-first
+- Recursos locales dentro de la carpeta `img/`
+- Formularios y controles nativos de HTML (`input`, `label`, `fieldset`, `datalist`, `pattern`)
 
-## Estructura del proyecto
+## Estructura del repositorio
 
 ```text
 .
-├── index.html        # Página principal
-├── acercade.html     # Información personal y profesional
-├── styless.css       # Hoja de estilos disponible en el proyecto
+├── index.html         # Página principal / bienvenida
+├── acercade.html      # Información personal e intereses
+├── contacto.html      # Formulario de contacto y resumen de datos
+├── styles.css         # Estilos compartidos del portal
 ├── img/
 │   └── mi_foto.jpg   # Imagen de perfil
-├── REFLEXION.md      # Reflexión sobre el proceso de aprendizaje
-└── README.md         # Documentación del proyecto
+├── REFLEXION.md       # Reflexión sobre el proceso de aprendizaje
+├── README.md          # Documentación del proyecto
+└── .gitignore         # Archivos excluidos del control de versiones (si aplica)
 ```
 
-## Ejecución
+## Cómo ejecutar el proyecto
 
-El proyecto no requiere instalación de dependencias ni un servidor backend.
+No necesita dependencias ni backend. Puede abrirse directamente en el navegador o servirse localmente con un pequeño servidor.
 
-1. Clonar o descargar este repositorio.
-2. Abrir `index.html` directamente en un navegador.
-3. Navegar entre las secciones **Inicio** y **Acerca de**.
+### Opción 1: abrir directamente
 
-También puede ejecutarse con cualquier servidor local para desarrollo. Por ejemplo, desde la carpeta raíz:
+1. Descargar o clonar el repositorio.
+2. Abrir `index.html` con un navegador.
+
+### Opción 2: servidor local
+
+Desde la carpeta raíz, ejecutar:
 
 ```bash
 python -m http.server 8000
 ```
 
-Luego, abrir [http://localhost:8000](http://localhost:8000) en el navegador.
+Luego abrir en el navegador:
 
+```text
+http://localhost:8000
+```
 
 ## Objetivos de aprendizaje
 
-- Practicar la creación de páginas semánticas con HTML5.
-- Organizar la navegación entre documentos HTML.
-- Incorporar recursos multimedia locales con textos alternativos.
-- Aplicar estilos básicos mediante CSS.
-- Documentar la estructura y el uso de un proyecto web.
+- Crear páginas web estáticas con estructura semántica.
+- Organizar navegación entre múltiples documentos HTML.
+- Incorporar contenido multimedia y textos alternativos.
+- Aplicar estilos coherentes mediante CSS.
+- Trabajar con formularios HTML y validaciones básicas del navegador.
+- Documentar un proyecto web de forma clara y ordenada.
+
+## Documentación complementaria
+
+- [REFLEXION.md](REFLEXION.md): análisis y reflexión sobre la implementación del formulario y el uso de etiquetas y validaciones HTML.
 
 ## Autora
 
