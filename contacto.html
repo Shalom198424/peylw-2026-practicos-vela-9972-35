@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Contacto - Portal de Sandra Vela</title>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body id="top">
+
+    <!-- TOKEN-ALUMNO: vela-9972-35 -->
+
+    <header>
+
+        <div class="encabezado-marca">
+
+            <h1>Portal de Sandra Vela - vela-9972-35</h1>
+
+            <img
+                class="logo-curza"
+                src="img/logo-curza.png"
+                alt="Logo del CURZA"
+            >
+
+        </div>
+
+        <nav aria-label="Navegación principal">
+            <ul>
+
+                <li>
+                    <a href="index.html">Inicio</a>
+                </li>
+
+                <li>
+                    <a href="acercade.html">Acerca de</a>
+                </li>
+
+                <li>
+                    <a href="contacto.html">Contacto</a>
+                </li>
+
+            </ul>
+        </nav>
+
+    </header>
+
+
+    <main>
+
+        <section>
+
+            <h2>Formulario de contacto</h2>
+
+            <form action="#" method="post">
+
+                <div class="formulario-campo">
+
+                    <label for="nombre">
+                        Nombre:
+                    </label>
+
+                    <input
+                        type="text"
+                        id="nombre"
+                        name="nombre"
+                        required
+                        maxlength="20"
+                    >
+
+                </div>
+
+
+                <div class="formulario-campo">
+
+                    <label for="apellido">
+                        Apellido:
+                    </label>
+
+                    <input
+                        type="text"
+                        id="apellido"
+                        name="apellido"
+                        maxlength="20"
+                    >
+
+                </div>
+
+
+                <div class="formulario-campo">
+
+                    <label for="email">
+                        Correo electrónico:
+                    </label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="formulario-campo">
+
+                    <label for="telefono">
+                        Teléfono:
+                    </label>
+
+                    <input
+                        type="tel"
+                        id="telefono"
+                        name="telefono"
+                        placeholder="Ej: +54 2920 123456"
+                    >
+
+                </div>
+
+
+                <div class="formulario-campo">
+
+                    <label for="edad">
+                        Edad:
+                    </label>
+
+                    <input
+                        type="number"
+                        id="edad"
+                        name="edad"
+                        min="16"
+                        max="120"
+                    >
+
+                </div>
+
+
+                <div class="formulario-campo">
+
+                    <label for="direccion">
+                        Dirección:
+                    </label>
+
+                    <input
+                        type="text"
+                        id="direccion"
+                        name="direccion"
+                    >
+
+                </div>
+
+
+                <div class="formulario-campo">
+
+                    <label for="provincia">
+                        Provincia:
+                    </label>
+
+                    <input
+                        type="text"
+                        id="provincia"
+                        name="provincia"
+                        list="provincias"
+                    >
+
+                    <datalist id="provincias">
+
+                        <option value="Río Negro">
+                        <option value="Neuquén">
+                        <option value="Chubut">
+                        <option value="Santa Cruz">
+                        <option value="Tierra del Fuego">
+                        <option value="La Pampa">
+
+                    </datalist>
+
+                </div>
+
+
+                <div class="formulario-campo">
+
+                    <label for="codigo-postal">
+                        Código Postal:
+                    </label>
+
+                    <input
+                        type="text"
+                        id="codigo-postal"
+                        name="codigo-postal"
+                        pattern="^[A-Z]\d{4}[A-Z]{3}$"
+                        title="Ingrese el código postal con el formato R8500AAF"
+                    >
+
+                </div>
+
+
+                <fieldset>
+
+                    <legend>
+                        Método de Contacto Preferido
+                    </legend>
+
+                    <div class="opciones">
+
+                        <div class="opcion">
+
+                            <input
+                                type="radio"
+                                id="contacto-email"
+                                name="metodo-contacto"
+                                value="Correo electrónico"
+                                checked
+                            >
+
+                            <label for="contacto-email">
+                                Correo electrónico
+                            </label>
+
+                        </div>
+
+
+                        <div class="opcion">
+
+                            <input
+                                type="radio"
+                                id="contacto-postal"
+                                name="metodo-contacto"
+                                value="Correo postal"
+                            >
+
+                            <label for="contacto-postal">
+                                Correo postal
+                            </label>
+
+                        </div>
+
+
+                        <div class="opcion">
+
+                            <input
+                                type="radio"
+                                id="contacto-telefono"
+                                name="metodo-contacto"
+                                value="Teléfono"
+                            >
+
+                            <label for="contacto-telefono">
+                                Teléfono
+                            </label>
+
+                        </div>
+
+                    </div>
+
+                </fieldset>
+
+
+                <fieldset>
+
+                    <legend>
+                        Suscripción de Interés
+                    </legend>
+
+                    <div class="opciones">
+
+                        <div class="opcion">
+
+                            <input
+                                type="checkbox"
+                                id="noticias"
+                                name="suscripciones"
+                                value="Noticias"
+                            >
+
+                            <label for="noticias">
+                                Noticias
+                            </label>
+
+                        </div>
+
+
+                        <div class="opcion">
+
+                            <input
+                                type="checkbox"
+                                id="promociones"
+                                name="suscripciones"
+                                value="Promociones"
+                            >
+
+                            <label for="promociones">
+                                Promociones
+                            </label>
+
+                        </div>
+
+
+                        <div class="opcion">
+
+                            <input
+                                type="checkbox"
+                                id="alertas"
+                                name="suscripciones"
+                                value="Alertas"
+                                checked
+                            >
+
+                            <label for="alertas">
+                                Alertas
+                            </label>
+
+                        </div>
+
+
+                        <div class="opcion">
+
+                            <input
+                                type="checkbox"
+                                id="eventos"
+                                name="suscripciones"
+                                value="Eventos"
+                            >
+
+                            <label for="eventos">
+                                Eventos
+                            </label>
+
+                        </div>
+
+                    </div>
+
+                </fieldset>
+
+
+                <div class="boton-contenedor">
+
+                    <button
+                        type="submit"
+                        id="btn-cargar-vela-9972-35"
+                    >
+                        Cargar
+                    </button>
+
+                </div>
+
+            </form>
+
+        </section>
+
+
+        <section>
+
+            <h2>Resumen de datos</h2>
+
+            <div class="tabla-contenedor">
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+                            <th>Campo</th>
+                            <th>Dato</th>
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody>
+
+                        <tr>
+                            <th>Nombre</th>
+                            <td id="resumen-nombre"></td>
+                        </tr>
+
+                        <tr>
+                            <th>Apellido</th>
+                            <td id="resumen-apellido"></td>
+                        </tr>
+
+                        <tr>
+                            <th>Email</th>
+                            <td id="resumen-email"></td>
+                        </tr>
+
+                        <tr>
+                            <th>Teléfono</th>
+                            <td id="resumen-telefono"></td>
+                        </tr>
+
+                        <tr>
+                            <th>Edad</th>
+                            <td id="resumen-edad"></td>
+                        </tr>
+
+                        <tr>
+                            <th>Dirección</th>
+                            <td id="resumen-direccion"></td>
+                        </tr>
+
+                        <tr>
+                            <th>Provincia</th>
+                            <td id="resumen-provincia"></td>
+                        </tr>
+
+                        <tr>
+                            <th>CP</th>
+                            <td id="resumen-cp"></td>
+                        </tr>
+
+                        <tr>
+                            <th>Método de Contacto</th>
+                            <td id="resumen-metodo-contacto"></td>
+                        </tr>
+
+                        <tr>
+                            <th>Suscripciones</th>
+                            <td id="resumen-suscripciones"></td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <a
+        class="btn-inicio"
+        href="#top"
+        aria-label="Volver al inicio"
+        title="Volver al inicio"
+    >
+        ▲
+    </a>
+
+
+    <footer>
+
+        <p>© 2026 Sandra Vela</p>
+
+        <p>CURZAS - UNCo, Viedma, Río Negro</p>
+
+        <p>vela-9972-35</p>
+
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>

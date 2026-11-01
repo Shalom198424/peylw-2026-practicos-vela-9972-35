@@ -1,0 +1,582 @@
+/*
+    ============================================================
+    TP4 - CSS Y RESPONSIVE DESIGN
+    ============================================================
+    Alumna: Sandra Vela
+    Identificador de alumno: vela-9972-35
+
+    PALETA PERSONALIZADA:
+    Color primario:
+    hsl(145, 45%, 35%)
+    Color primario oscuro:
+    hsl(145, 50%, 25%)
+    Color secundario:
+    hsl(160, 40%, 38%)
+    Color de fondo:
+    hsl(120, 20%, 97%)
+    Color de texto:
+    hsl(145, 25%, 18%)
+    ============================================================
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap');
+
+
+/* =========================================================
+   VARIABLES DE COLOR
+   ========================================================= */
+
+:root {
+    --color-primario: hsl(145, 45%, 35%);
+    --color-primario-oscuro: hsl(145, 50%, 25%);
+    --color-secundario: hsl(160, 40%, 38%);
+    --color-fondo: hsl(120, 20%, 97%);
+    --color-blanco: hsl(0, 0%, 100%);
+    --color-texto: hsl(145, 25%, 18%);
+    --color-borde: hsl(145, 18%, 82%);
+    --color-fila: hsl(145, 35%, 95%);
+    --color-enfoque: hsl(145, 45%, 90%);
+}
+
+
+/* =========================================================
+   CONFIGURACIÓN GENERAL
+   ========================================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: 'Outfit', sans-serif;
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   HEADER FIJO
+   ========================================================= */
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 110px;
+    padding: 15px 30px;
+    background-color: var(--color-primario);
+    color: var(--color-blanco);
+    z-index: 1000;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+
+    box-shadow: 0 3px 12px hsl(210, 25%, 15%, 0.25);
+}
+
+
+/* Grupo del título y logo */
+
+.encabezado-marca {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.encabezado-marca h1 {
+    margin: 0;
+    font-size: 1.5rem;
+    line-height: 1.2;
+}
+
+
+/* =========================================================
+   LOGO CURZA
+   ========================================================= */
+
+.logo-curza {
+    width: 70px;
+    height: 70px;
+    object-fit: contain;
+
+    transition: transform 1s ease-in-out;
+    transform-style: preserve-3d;
+}
+
+/*
+    Al pasar el mouse por encima,
+    el logo realiza una rotación 3D
+    de 360 grados sobre el eje vertical.
+*/
+
+.logo-curza:hover {
+    transform: rotateY(360deg);
+}
+
+
+/* =========================================================
+   NAVEGACIÓN
+   ========================================================= */
+
+nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    display: block;
+    padding: 8px 14px;
+
+    color: var(--color-blanco);
+    text-decoration: none;
+    font-weight: 500;
+
+    border-radius: 8px;
+
+    transition:
+        background-color 0.3s ease,
+        transform 0.3s ease;
+}
+
+nav a:hover,
+nav a:focus {
+    background-color: var(--color-primario-oscuro);
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   CONTENIDO PRINCIPAL
+   ========================================================= */
+
+/*
+    El header es fixed y ocupa espacio fuera del flujo normal.
+    Por eso agregamos padding superior al main.
+*/
+
+main {
+    width: min(1100px, 92%);
+    margin: 0 auto;
+    padding-top: 145px;
+    padding-bottom: 50px;
+}
+
+section {
+    margin-bottom: 35px;
+}
+
+section h2 {
+    color: var(--color-primario-oscuro);
+    margin-bottom: 18px;
+}
+
+
+/* =========================================================
+   TARJETAS / ARTÍCULOS
+   ========================================================= */
+
+article {
+    background-color: var(--color-blanco);
+    border: 1px solid var(--color-borde);
+    border-radius: 12px;
+    padding: 25px;
+    margin-bottom: 25px;
+
+    box-shadow: 0 4px 12px hsl(210, 20%, 20%, 0.08);
+}
+
+
+/* =========================================================
+   BIOGRAFÍA CON SCROLL
+   ========================================================= */
+
+.bio-scroll {
+    max-height: 300px;
+    overflow-y: auto;
+
+    background-color: var(--color-blanco);
+    border: 1px solid var(--color-borde);
+    border-radius: 10px;
+    padding: 0 20px 20px;
+}
+
+.bio-scroll h2 {
+    position: sticky;
+    top: 0;
+
+    background-color: var(--color-blanco);
+
+    z-index: 10;
+
+    margin: 0 -20px 20px;
+    padding: 15px 20px;
+
+    border-bottom: 1px solid var(--color-borde);
+}
+
+
+/* =========================================================
+   FORMULARIO
+   ========================================================= */
+
+form {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px 25px;
+
+    background-color: var(--color-blanco);
+    padding: 25px;
+
+    border: 1px solid var(--color-borde);
+    border-radius: 12px;
+
+    box-shadow: 0 4px 12px hsl(210, 20%, 20%, 0.08);
+}
+
+.formulario-completo {
+    grid-column: 1 / -1;
+}
+
+.formulario-campo {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.formulario-campo label {
+    font-weight: 600;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="number"] {
+    width: 100%;
+
+    padding: 10px 12px;
+
+    border: 1px solid var(--color-borde);
+    border-radius: 8px;
+
+    background-color: var(--color-blanco);
+    color: var(--color-texto);
+
+    font: inherit;
+
+    transition:
+        border-color 0.25s ease,
+        box-shadow 0.25s ease,
+        background-color 0.25s ease;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+input[type="number"]:focus {
+    outline: none;
+
+    border-color: var(--color-primario);
+
+    background-color: var(--color-enfoque);
+
+    box-shadow: 0 0 0 3px hsl(198, 65%, 36%, 0.15);
+}
+
+
+/* =========================================================
+   FIELDSET
+   ========================================================= */
+
+fieldset {
+    border: 1px solid var(--color-borde);
+    border-radius: 10px;
+    padding: 18px;
+
+    background-color: hsl(210, 25%, 99%);
+}
+
+legend {
+    padding: 0 8px;
+    font-weight: 600;
+    color: var(--color-primario-oscuro);
+}
+
+.opciones {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.opcion {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+
+/* =========================================================
+   BOTÓN CARGAR
+   ========================================================= */
+
+.boton-contenedor {
+    grid-column: 1 / -1;
+}
+
+button[type="submit"] {
+    padding: 12px 25px;
+
+    border: none;
+    border-radius: 8px;
+
+    background-color: var(--color-secundario);
+    color: var(--color-blanco);
+
+    font: inherit;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.3s ease,
+        background-color 0.3s ease;
+}
+
+button[type="submit"]:hover,
+button[type="submit"]:focus {
+    background-color: var(--color-primario-oscuro);
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   TABLAS
+   ========================================================= */
+
+.tabla-contenedor {
+    width: 100%;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    min-width: 600px;
+
+    border-collapse: collapse;
+
+    background-color: var(--color-blanco);
+}
+
+th,
+td {
+    border: 1px solid var(--color-borde);
+    padding: 12px 15px;
+    text-align: left;
+}
+
+thead {
+    background-color: var(--color-primario);
+    color: var(--color-blanco);
+}
+
+tbody tr:nth-child(even) {
+    background-color: var(--color-fila);
+}
+
+tbody tr:hover {
+    background-color: var(--color-enfoque);
+}
+
+
+/* =========================================================
+   BOTÓN VOLVER AL INICIO
+   ========================================================= */
+
+.btn-inicio {
+    position: fixed;
+
+    bottom: 20px;
+    right: 20px;
+
+    width: 48px;
+    height: 48px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: var(--color-secundario);
+    color: var(--color-blanco);
+
+    text-decoration: none;
+
+    border-radius: 50%;
+
+    font-size: 1.3rem;
+    font-weight: bold;
+
+    z-index: 999;
+
+    box-shadow: 0 4px 10px hsl(210, 20%, 20%, 0.25);
+
+    transition:
+        transform 0.3s ease,
+        background-color 0.3s ease;
+}
+
+.btn-inicio:hover,
+.btn-inicio:focus {
+    background-color: var(--color-primario-oscuro);
+    transform: translateY(-4px);
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+footer {
+    padding: 30px;
+
+    background-color: var(--color-primario-oscuro);
+    color: var(--color-blanco);
+
+    text-align: center;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+
+/* =========================================================
+   RESPONSIVE - TABLETS Y CELULARES
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    header {
+        position: fixed;
+
+        min-height: auto;
+
+        padding: 12px 15px;
+
+        flex-direction: column;
+        align-items: stretch;
+
+        gap: 10px;
+    }
+
+    .encabezado-marca {
+        justify-content: center;
+    }
+
+    .encabezado-marca h1 {
+        font-size: 1.15rem;
+        text-align: center;
+    }
+
+    .logo-curza {
+        width: 50px;
+        height: 50px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+        gap: 4px;
+    }
+
+    nav li {
+        width: 100%;
+    }
+
+    nav a {
+        width: 100%;
+        text-align: center;
+    }
+
+    main {
+        width: 94%;
+        padding-top: 245px;
+    }
+
+    form {
+        grid-template-columns: 1fr;
+        padding: 18px;
+    }
+
+    .formulario-completo,
+    .boton-contenedor {
+        grid-column: auto;
+    }
+
+    .opciones {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .bio-scroll {
+        max-height: 300px;
+    }
+
+    .btn-inicio {
+        width: 44px;
+        height: 44px;
+        bottom: 15px;
+        right: 15px;
+    }
+}
+
+
+/* =========================================================
+   TP5 - INTERACTIVIDAD
+   ========================================================= */
+
+.cv-completo {
+    display: none;
+}
+
+.celda-advertencia {
+    background-color: #ffcccc;
+}
+
+.btn-leer-mas {
+    padding: 10px 22px;
+    margin-top: 10px;
+
+    border: none;
+    border-radius: 8px;
+
+    background-color: var(--color-secundario);
+    color: var(--color-blanco);
+
+    font: inherit;
+    font-weight: 600;
+    cursor: pointer;
+
+    transition:
+        transform 0.3s ease,
+        background-color 0.3s ease;
+}
+
+.btn-leer-mas:hover,
+.btn-leer-mas:focus {
+    background-color: var(--color-primario-oscuro);
+    transform: translateY(-2px);
+}
