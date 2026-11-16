@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Juegos - Portal de Sandra Vela</title>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body id="top">
+
+    <!-- TOKEN-ALUMNO: vela-9972-35 -->
+
+    <header>
+
+        <div class="encabezado-marca">
+
+            <h1>Portal de Sandra Vela - vela-9972-35</h1>
+
+            <img
+                class="logo-curza"
+                src="img/logo-curza.png"
+                alt="Logo del CURZA"
+            >
+
+        </div>
+
+        <nav aria-label="Navegación principal">
+            <ul>
+
+                <li>
+                    <a href="index.html">Inicio</a>
+                </li>
+
+                <li>
+                    <a href="acercade.html">Acerca de</a>
+                </li>
+
+                <li>
+                    <a href="contacto.html">Contacto</a>
+                </li>
+
+                <li>
+                    <a href="juego.html">Juegos</a>
+                </li>
+
+            </ul>
+        </nav>
+
+    </header>
+
+
+    <main>
+
+        <section>
+
+            <h2>Área de Juegos de Sandra Vela - Token: vela-9972-35</h2>
+
+            <p>
+                Adivinanza de números: pensé un número entre 1 y 100.
+                Ingresá tus intentos y te diré si es muy alto, muy bajo
+                o si acertaste. ¡Cuantos menos intentos, mejor!
+            </p>
+
+            <!-- Panel de estadísticas -->
+            <div class="juego-estadisticas">
+
+                <div class="estadistica">
+                    <span class="estadistica-etiqueta">Intentos</span>
+                    <span class="estadistica-valor" id="stat-intentos">0</span>
+                </div>
+
+                <div class="estadistica">
+                    <span class="estadistica-etiqueta">Puntos</span>
+                    <span class="estadistica-valor" id="stat-puntos">0</span>
+                </div>
+
+                <div class="estadistica">
+                    <span class="estadistica-etiqueta">Récord Actual</span>
+                    <span class="estadistica-valor" id="stat-record">Sin récord todavía</span>
+                </div>
+
+            </div>
+
+            <!-- Área interactiva -->
+            <div class="juego-area">
+
+                <form id="form-juego" class="juego-form" novalidate>
+
+                    <label for="input-numero" class="juego-label">
+                        Tu número:
+                    </label>
+
+                    <input
+                        type="number"
+                        id="input-numero"
+                        min="1"
+                        max="100"
+                        inputmode="numeric"
+                        placeholder="1 - 100"
+                    >
+
+                    <button
+                        type="submit"
+                        id="btn-adivinar-vela-9972-35"
+                        class="btn-juego"
+                    >
+                        Adivinar
+                    </button>
+
+                    <button
+                        type="button"
+                        id="btn-reiniciar-vela-9972-35"
+                        class="btn-juego"
+                    >
+                        Reiniciar
+                    </button>
+
+                </form>
+
+                <!-- Panel de feedback -->
+                <div
+                    id="juego-feedback"
+                    class="juego-feedback feedback-neutro"
+                    aria-live="polite"
+                >
+                    Cargando juego...
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <a
+        class="btn-inicio"
+        href="#top"
+        aria-label="Volver al inicio"
+        title="Volver al inicio"
+    >
+        ▲
+    </a>
+
+
+    <footer>
+
+        <p>© 2026 Sandra Vela</p>
+
+        <p>CURZAS - UNCo, Viedma, Río Negro</p>
+
+        <p>vela-9972-35</p>
+
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
